@@ -1,0 +1,7 @@
+{
+  "name": "nfcQrApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
