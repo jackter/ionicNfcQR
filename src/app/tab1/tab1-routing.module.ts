@@ -6,6 +6,22 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  {
+    path: 'nfc-read',
+    loadChildren: () => import('./nfc-read/nfc-read.module').then( m => m.NfcReadPageModule)
+  },
+  {
+    path: 'nfc-write',
+    loadChildren: () => import('./nfc-write/nfc-write.module').then( m => m.NfcWritePageModule)
+  },
+  {
+    path: 'qr-read',
+    loadChildren: () => import('./qr-read/qr-read.module').then( m => m.QrReadPageModule)
+  },
+  {
+    path: 'qr-generate',
+    loadChildren: () => import('./qr-generate/qr-generate.module').then( m => m.QrGeneratePageModule)
   }
 ];
 

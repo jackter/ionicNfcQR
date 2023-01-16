@@ -2,7 +2,7 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+        <ion-card [routerLink]="['nfc-read']" style="height: 100px; display: flex; align-items: center; justify-content: center;">    
           <ion-card-content>
             <ion-icon name="card-outline"></ion-icon>
             <br/>
@@ -11,7 +11,7 @@
         </ion-card>
       </ion-col>
       <ion-col>
-        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+        <ion-card [routerLink]="['nfc-write']" style="height: 100px; display: flex; align-items: center; justify-content: center;">    
           <ion-card-content>
             <ion-icon name="card-outline"></ion-icon>
             <br/>
@@ -22,7 +22,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+        <ion-card [routerLink]="['qr-read']" style="height: 100px; display: flex; align-items: center; justify-content: center;">    
           <ion-card-content>
             <ion-icon name="qr-code-outline"></ion-icon>
             <br/>
@@ -31,7 +31,7 @@
         </ion-card>
       </ion-col>
       <ion-col>
-        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+        <ion-card [routerLink]="['qr-generate']" style="height: 100px; display: flex; align-items: center; justify-content: center;">    
           <ion-card-content>
             <ion-icon name="qr-code-outline"></ion-icon>
             <br/>
