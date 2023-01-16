@@ -1,4 +1,44 @@
 <div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+          <ion-card-content>
+            <ion-icon name="card-outline"></ion-icon>
+            <br/>
+            NFC Read
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+          <ion-card-content>
+            <ion-icon name="card-outline"></ion-icon>
+            <br/>
+            NFC Write
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+          <ion-card-content>
+            <ion-icon name="qr-code-outline"></ion-icon>
+            <br/>
+            QR Read
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card style="height: 100px; display: flex; align-items: center; justify-content: center;">    
+          <ion-card-content>
+            <ion-icon name="qr-code-outline"></ion-icon>
+            <br/>
+            QR Generate
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
