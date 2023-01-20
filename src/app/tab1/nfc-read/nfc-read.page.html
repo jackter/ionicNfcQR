@@ -8,5 +8,119 @@
 </ion-header>
 
 <ion-content>
+  <ion-card *ngIf="!readerMode">
+    <ion-card-header>
+      <ion-card-title>NFC Read</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 
+  <ion-card *ngIf="readerMode">
+    <ion-card-header>
+      <ion-card-title>NFC Tags</ion-card-title>
+    </ion-card-header>   
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="key-outline"></ion-icon>
+          <table>
+            <tr>
+              <td>
+                Data Format
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{readerMode.type}}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bag-add"></ion-icon>
+          <table>
+            <tr>
+              <td>
+                Size
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{readerMode.maxSize}}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="refresh-circle"></ion-icon>
+          <table>
+            <tr>
+              <td>
+                Writeable
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{readerMode.isWritable}}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="document-lock"></ion-icon>
+          <table>
+            <tr>
+              <td>
+                Can Make Read Only
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{readerMode.canMakeReadOnly}}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+        <ion-item *ngFor="let item of readerMode.ndefMessage; let i = index">
+          <ion-icon name="document-text"></ion-icon>
+          <table>
+            <tr>
+              <td>
+                Record {{ (i+1) }}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {{ ByteToStr(item.payload) }}
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>NFC Tags</ion-card-title>
+    </ion-card-header>   
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="document-text-outline"></ion-icon>
+          <table>
+            <tr>
+              <td>
+                Record 1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Hallo
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card> -->
 </ion-content>

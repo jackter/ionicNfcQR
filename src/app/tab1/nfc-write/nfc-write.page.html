@@ -8,5 +8,18 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label position="stacked">Text</ion-label>
+    <ion-input [clearOnEdit]="true" placeholder="Enter text" [(ngModel)]="record"></ion-input>
+  </ion-item>
 
+  <!-- <ion-button expand="block">
+    ADD RECORD
+  </ion-button> -->
+  <ion-button expand="block" (click)="writeTag()">
+    WRITE TO TAG
+  </ion-button>
+  <ion-button expand="block" color="warning" (click)="eraseTag()">
+    ERASE TAG
+  </ion-button>
 </ion-content>
